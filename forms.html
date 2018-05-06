@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Working with Forms</title>
+</head>
+<body>
+	<h1>Login</h1>
+	<form>
+		<input type="search" name="searchForm" disabled="disabled" value="hello world"/>
+		<label>Number of apps you want to use</label>
+		<input type="number" name="apps" min="0" max="100" step="5" />
+		<input type="button" name="hello" value="hello">
+		<br/>
+		<input list="browsers">
+
+		<datalist id="browsers">
+		  <option value="Internet Explorer">
+		  <option value="Firefox">
+		  <option value="Chrome">
+		  <option value="Opera">
+		  <option value="Safari">
+		</datalist>
+	</form>
+	<hr/>
+	<form id="formData">
+		<label>Full Name</label><br/>
+		<input type="text" autocomplete="on" name="fullname" placeholder="Enter your fullname" required="required" value="Prajwol Buthoki" readonly="readonly"><br/>
+		<label>Phone Number</label><br/>
+		<input type="number" name="phone" placeholder="Enter your phone number" value="1234567890"  autofocus="autofocus" ><br/>
+		<label>Email</label><br/>
+		<input type="email" name="emailId"  placeholder="Enter your email Id" required="required" value="prajwol@budathoki.com" /><br/>
+		<label>Password</label><br/>
+		<input type="password" name="password"  placeholder="Enter your password" required="required" value="1234567890" /><br/>
+		<label>Hobbies</label><br/>
+		<input id="playing" type="checkbox" name="hobbies" value="playing" checked="checked" /> <label for="playing">Playing</label> <br/>
+		<input id="singing" type="checkbox" name="hobbies" value="Singing"/> <label for="singing">Singing</label> <br/>
+		<input id="dancing" type="checkbox" name="hobbies" value="Dancing"/> <label for="dancing">Dancing</label> <br/>
+		<label>Gender</label><br/>
+		<input id="male" type="radio" name="gender" value="male" checked="checked"> <label for="male">Male</label>
+		<input id="female" type="radio" name="gender" value="female"> <label for="female">Female</label><br/>
+		<label>Date</label><br/>
+		<input type="date" name="date"><br/>
+		<label>Time</label><br/>
+		<input type="time" name="time"><br/>
+		<label>Date Time</label><br/>
+		<input type="datetime-local" name="datetime"><br/>
+		<label>Citizenship</label><br/>
+		<input type="file" name="citizenship" accept="image/*" multiple="multiple"><br/>
+		<label>Country</label><br/>
+		<select>
+			<option>Nepal</option>
+			<option>India</option>
+			<option>China</option>
+			<option>Maldivs</option>
+			<option>USA</option>
+			<option>UK</option>
+			<option>Brazil</option>
+			<option>Germany</option>
+		</select><br/>
+		<label>Bio</label><br/>
+		<textarea rows="10" cols="50"></textarea>
+		<br/>
+		<input type="submit"/>
+		<input type="reset"/>
+	</form>
+	<script type="text/javascript">
+		document.getElementById('formData').addEventListener('submit',(e) => {
+			e.preventDefault();
+			alert('form submitted');
+		})
+		function submitFunc(e){
+			
+		}
+	</script>
+</body>
+</html>
